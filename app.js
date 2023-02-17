@@ -18,6 +18,16 @@ downBtn.addEventListener('click', () => {
   changeSLide('down')
 })
 
+//Добавим возможность переключать слайды путём нажатия кнопок
+document.addEventListener('keydown', 
+event => {
+  if (event.key === 'ArrowUp') {
+    changeSLide('up')
+  } else if (event.key === 'ArrowDown') {
+    changeSLide('down')
+  }
+})
+
 //Создадим функцию смены слайда, которая в параметр будет принимать направление движения слайдов
 function changeSLide(direction) {
   if (direction === 'up') {
